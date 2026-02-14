@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TanishiFinance | Professional Loan Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:white;scroll-behavior:smooth;}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:15px 5%;background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);position:sticky;top:0;z-index:1000;}
+header img{height:60px;}
+nav a{color:white;text-decoration:none;margin-left:25px;font-weight:500;transition:0.3s;}
+nav a:hover{color:#00ffcc;}
+
+.hero{text-align:center;padding:100px 5%;}
+.hero h1{font-size:42px;font-weight:700;margin-bottom:15px;}
+.hero p{font-size:18px;opacity:0.9;}
+
+.services{padding:70px 5%;text-align:center;background:rgba(255,255,255,0.05);}
+.services h2{margin-bottom:40px;font-size:30px;}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;}
+.service-card{background:rgba(255,255,255,0.08);padding:25px;border-radius:15px;cursor:pointer;transition:0.4s;animation:pulse 2s infinite;}
+.service-card:hover{transform:translateY(-10px);background:rgba(255,255,255,0.15);}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(0,255,204,0.6);}
+70%{box-shadow:0 0 0 15px rgba(0,255,204,0);}
+100%{box-shadow:0 0 0 0 rgba(0,255,204,0);}
+}
+
+.form-section{display:none;padding:60px 5%;text-align:center;}
+.form-box{background:white;color:black;max-width:600px;margin:auto;padding:40px;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,0.3);}
+.form-box h2{margin-bottom:25px;color:#1e3c72;}
+input{width:100%;padding:14px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc;}
+button{width:100%;padding:14px;border:none;border-radius:8px;background:#1e3c72;color:white;font-size:16px;cursor:pointer;transition:0.3s;}
+button:hover{background:#16315c;}
+
+.about{padding:70px 5%;text-align:center;background:rgba(255,255,255,0.05);}
+.contact{padding:70px 5%;text-align:center;}
+footer{text-align:center;padding:20px;background:rgba(0,0,0,0.4);}
+
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 22px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 10px 25px rgba(0,0,0,0.4);transition:0.3s;}
+.whatsapp:hover{transform:scale(1.1);}
+</style>
+
+<script>
+function openForm(){
+document.getElementById("loanForm").style.display="block";
+document.getElementById("loanForm").scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" alt="TanishiFinance Logo">
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>All Types Loan & Financial Services</h1>
+<p>Personal Loan | Car Loan | Property Loan | Business Loan | Insurance | Credit Card | Demat Account</p>
+</section>
+
+<section class="services" id="services">
+<h2>Our Services</h2>
+<div class="service-grid">
+<div class="service-card" onclick="openForm()">Personal Loan</div>
+<div class="service-card" onclick="openForm()">Car Loan</div>
+<div class="service-card" onclick="openForm()">Property Loan</div>
+<div class="service-card" onclick="openForm()">Business Loan</div>
+<div class="service-card" onclick="openForm()">Insurance</div>
+<div class="service-card" onclick="openForm()">Credit Card</div>
+<div class="service-card" onclick="openForm()">Demat Account</div>
+</div>
+</section>
+
+<section class="form-section" id="loanForm">
+<div class="form-box">
+<h2>Loan Requirement Form</h2>
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="text" placeholder="PAN Number" required>
+<input type="text" placeholder="Aadhaar Number" required>
+<input type="text" placeholder="Aadhaar Linked Mobile Number" required>
+<input type="email" placeholder="Email ID" required>
+<button type="submit">Submit Application</button>
+</form>
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>About TanishiFinance</h2>
+<p>TanishiFinance provides fast approval loans, insurance services, credit cards and demat account opening across India with professional guidance.</p>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<p><strong>Mobile:</strong> 9027043168</p>
+<p><strong>Email:</strong> bharatrajput819@gmail.com</p>
+<p>Available All Over India</p>
+</section>
+
+<footer>
+© 2026 TanishiFinance | All Rights Reserved
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919027043168" target="_blank">Chat on WhatsApp</a>
+
+</body>
+</html>
