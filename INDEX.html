@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TANISHI FINANCE | Professional Financial Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f1f3f6;}
+
+/* Flipkart Style Header */
+.top-header{
+background:#2874f0;
+padding:15px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+color:white;
+}
+.logo{
+font-size:26px;
+font-weight:800;
+}
+.search-box{
+flex:1;
+margin:0 30px;
+display:flex;
+}
+.search-box input{
+width:100%;
+padding:10px;
+border:none;
+outline:none;
+}
+.search-box button{
+padding:10px 20px;
+background:#ff9f00;
+border:none;
+cursor:pointer;
+font-weight:600;
+}
+.header-links{
+display:flex;
+gap:20px;
+font-weight:600;
+}
+
+/* Section */
+section{
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
+.section-title{
+text-align:center;
+font-size:30px;
+font-weight:800;
+margin-bottom:30px;
+}
+
+/* Cards */
+.card-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+.card:hover{transform:translateY(-8px);}
+
+/* EMI Calculator */
+.calculator{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+max-width:500px;
+margin:auto;
+}
+.calculator input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+.calculator button{
+padding:10px 20px;
+background:#2874f0;
+color:white;
+border:none;
+cursor:pointer;
+}
+.result{
+margin-top:15px;
+font-weight:700;
+}
+
+/* Form */
+.form-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+max-width:600px;
+margin:auto;
+}
+.form-box input, .form-box select{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+.form-box button{
+padding:12px;
+background:#ff9f00;
+border:none;
+font-weight:700;
+cursor:pointer;
+width:100%;
+}
+.apply-btn{
+display:block;
+text-align:center;
+margin-top:20px;
+background:#e53935;
+color:white;
+padding:12px;
+text-decoration:none;
+font-weight:700;
+border-radius:5px;
+}
+
+/* Bank Slider */
+.bank-slider{
+overflow:hidden;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+.slider-track{
+display:flex;
+gap:50px;
+animation:scroll 25s linear infinite;
+}
+.slider-track img{
+height:60px;
+}
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+footer{
+background:#172337;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-header">
+<div class="logo">TANISHI FINANCE</div>
+<div class="search-box">
+<input type="text" placeholder="Search for Loans, Credit Cards & More">
+<button>Search</button>
+</div>
+<div class="header-links">
+<div>Login</div>
+<div>Contact</div>
+</div>
+</div>
+
+<section>
+<div class="section-title">OUR SERVICES</div>
+<div class="card-container">
+<div class="card"><h3>PERSONAL LOAN</h3><p>Instant approval with minimum documents and fast disbursement.</p></div>
+<div class="card"><h3>BUSINESS LOAN</h3><p>Flexible funding solutions to grow your business.</p></div>
+<div class="card"><h3>CREDIT CARD</h3><p>Premium & lifetime free cards with rewards and cashback.</p></div>
+<div class="card"><h3>INSURANCE</h3><p>Secure your family with smart insurance planning.</p></div>
+</div>
+</section>
+
+<section>
+<div class="section-title">EMI CALCULATOR</div>
+<div class="calculator">
+<input type="number" id="amount" placeholder="Loan Amount">
+<input type="number" id="rate" placeholder="Interest Rate (%)">
+<input type="number" id="tenure" placeholder="Tenure (Months)">
+<button onclick="calculateEMI()">Calculate EMI</button>
+<div class="result" id="emiResult"></div>
+</div>
+</section>
+
+<section>
+<div class="section-title">ONLINE LOAN APPLY FORM</div>
+<div class="form-box">
+<input type="text" placeholder="Full Name">
+<input type="number" placeholder="Mobile Number">
+<input type="email" placeholder="Email Address">
+<select>
+<option>Select Loan Type</option>
+<option>Personal Loan</option>
+<option>Business Loan</option>
+<option>Credit Card</option>
+</select>
+<input type="number" placeholder="Required Loan Amount">
+<button>Submit Application</button>
+
+<a class="apply-btn" href="https://leads.banksathi.com/?h=RGQxcU1ZMzVPeWkrc0ZHb01pL0xyUT09" target="_blank">
+Apply Personal Loan - HDFC Bank
+</a>
+
+</div>
+</section>
+
+<section>
+<div class="section-title">OUR BANK PARTNERS</div>
+<div class="bank-slider">
+<div class="slider-track">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Axis_Bank_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Punjab_National_Bank_new_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg">
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 TANISHI FINANCE | ALL RIGHTS RESERVED
+</footer>
+
+<script>
+function calculateEMI(){
+let P = document.getElementById("amount").value;
+let R = document.getElementById("rate").value / 12 / 100;
+let N = document.getElementById("tenure").value;
+let EMI = (P * R * Math.pow(1+R,N)) / (Math.pow(1+R,N)-1);
+document.getElementById("emiResult").innerHTML = "Monthly EMI: ₹ " + EMI.toFixed(2);
+}
+</script>
+
+</body>
+</html>
